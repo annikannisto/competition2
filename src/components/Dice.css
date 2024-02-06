@@ -1,8 +1,9 @@
-.container {
-    display: flex;
-  }
-  img {
-    max-width: 100%; 
-    height: auto;    
-    margin: 10px;
-  }
+.dice-container {
+  float: left;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.dice-img {
+  width: 100px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+}

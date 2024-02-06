@@ -23,11 +23,12 @@ const Dice = () => {
   };
 
   return (
-    <div>
+    <div className="dice-container">
       <img
         src={`${process.env.PUBLIC_URL}/images/dice${diceValue || "-empty"}.png`}
         alt={`Dice Value: ${diceValue}`}
         onClick={handleImageClick}
+        className="dice-img"
         style={{ cursor: "pointer" }}
       />
     </div>
