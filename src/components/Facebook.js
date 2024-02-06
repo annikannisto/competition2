@@ -4,29 +4,79 @@ import "./Facebook.css";
 
 const FaceBook = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const countries = Array.from(
     new Set(profilesData.map((profile) => profile.country))
   );
 
   const handleCountryClick = (country) => {
-    setSelectedCountry(country);
+    // Check if clicking the same country to unselect
+    if (selectedCountry === country) {
+      setSelectedCountry(null);
+    } else {
+      setSelectedCountry(country);
+      setDropdownOpen(false);
+
+      // Scroll to the selected country's ID card only if the country is not null
+      const selectedCountryId = country.toLowerCase().replace(" ", "-");
+      const element = document.getElementById(selectedCountryId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!isDropdownOpen);
   };
 
   return (
     <div className="facebook">
       <div className="country-buttons">
-        {countries.map((country, index) => (
-          <button key={index} onClick={() => handleCountryClick(country)}>
+        {/* Button for All Countries */}
+        <button
+          onClick={() => handleCountryClick("All")}
+          className={selectedCountry === "All" ? "selected" : ""}
+        >
+          All Countries
+        </button>
+
+        {/* Four individual country buttons */}
+        {countries.slice(0, 4).map((country, index) => (
+          <button
+            key={index}
+            onClick={() => handleCountryClick(country)}
+            className={selectedCountry === country ? "selected" : ""}
+          >
             {country}
           </button>
         ))}
+
+        {/* Button to open/close the dropdown */}
+        <button onClick={handleDropdownToggle}>...</button>
+
+        {/* Dropdown with the rest of the individual countries */}
+        {isDropdownOpen &&
+          countries.slice(4).map((country, index) => (
+            <button
+              key={index}
+              onClick={() => handleCountryClick(country)}
+              className={selectedCountry === country ? "selected" : ""}
+            >
+              {country}
+            </button>
+          ))}
       </div>
+
       <div className="profile-container">
         {profilesData.map((profile, index) => (
           <div
             key={index}
+            id={profile.country.toLowerCase().replace(" ", "-")}
             className={`id-card ${
-              selectedCountry === profile.country ? "selected-country" : ""
+              (selectedCountry === profile.country ||
+                selectedCountry === "All") &&
+              "selected-country"
             }`}
           >
             <div className="picture">

@@ -1,30 +1,4 @@
 /* Facebook Component */
-.country-buttons {
-  display: flex;
-  gap: 10px;
-  padding-left: 5px;
-  padding-bottom: 5px;
-  font-weight: bold;
-  font-size: 20px;
-  color: black;
-}
-
-.country-buttons button {
-  background-color: white; /* Set the initial background color to white */
-  color: black;
-  border: 1px solid lightgrey;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.3s; /* Add transition for smooth color change */
-}
-
-.country-buttons button:hover {
-  background-color: lightskyblue; /* Change background color on hover */
-}
-
-body .country-buttons {
-  padding-left: 10px;
-}
 
 /* ID Card Section */
 .id-card {
@@ -43,11 +17,50 @@ body .country-buttons {
 
 .picture {
   margin-right: 16px;
-  padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 .picture img {
   width: 180px;
+}
+
+.country-buttons {
+  position: relative; /* Ensure relative positioning for absolute child */
+  display: flex;
+  gap: 10px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.country-buttons button {
+  background-color: white;
+  color: black;
+  border: 1px solid gray; 
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.country-buttons button:hover {
+  background-color: lightcyan;
+}
+
+/* Selected country buttons */
+.country-buttons button.selected {
+  background-color: lightskyblue;
+  color: white;
+}
+
+body .country-buttons {
+  padding-left: 10px;
+}
+
+.country-buttons-container {
+  max-width: 600px; /* Adjust the max-width to your preference */
+  margin: 0 auto;
 }
