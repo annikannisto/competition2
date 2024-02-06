@@ -5,10 +5,7 @@
   cursor: pointer;
   border-radius: 2px;
   margin: 10px; /* Added margin between buttons */
-}
-
-.like-button:last-child {
-  margin-right: 0; /* Remove right margin for the last button */
+  position: relative;
 }
 
 .like-button-purple {

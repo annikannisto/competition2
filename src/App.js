@@ -3,12 +3,16 @@ import './App.css';
 import LikeButton from './components/LikeButton';
 import './components/LikeButton.css';
 import ClickablePicture from './components/ClickablePicture';
+import './components/ClickablePicture.css';
 
 const App = () => {
   return (
-    <div className="container">
+    <div>
       <LikeButton />
-      <ClickablePicture img="maxence.png" imgClicked="maxence-glasses.png" />
+      <ClickablePicture
+        img="https://raw.githubusercontent.com/tx00-web-en/Activities/week4/Competition-2/images/maxence.png"
+        imgClicked="https://raw.githubusercontent.com/tx00-web-en/Activities/week4/Competition-2/images/maxence-glasses.png"
+      />
     </div>
   );
 };
