@@ -8,13 +8,19 @@ import FaceBook from "./components/Facebook";
 
 const App = () => {
   return (
-    <div>
-      <LikeButton />
-      <ClickablePicture
-        img="https://raw.githubusercontent.com/tx00-web-en/Activities/week4/Competition-2/images/maxence.png"
-        imgClicked="https://raw.githubusercontent.com/tx00-web-en/Activities/week4/Competition-2/images/maxence-glasses.png"
-      />
-      <FaceBook />
+    <div className="app-container">
+      <div className="app-section">
+        <LikeButton />
+      </div>
+      <div className="app-section">
+        <ClickablePicture
+          img="https://raw.githubusercontent.com/tx00-web-en/Activities/week4/Competition-2/images/maxence.png"
+          imgClicked="https://raw.githubusercontent.com/tx00-web-en/Activities/week4/Competition-2/images/maxence-glasses.png"
+        />
+      </div>
+      <div className="app-section">
+        <FaceBook />
+      </div>
     </div>
   );
 };

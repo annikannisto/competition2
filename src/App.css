@@ -4,7 +4,11 @@
 
 .app-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.app-section {
+  margin-bottom: 20px; /* Adjust the margin as needed */
 }
 
 .App-logo {
