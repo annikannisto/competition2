@@ -5,6 +5,7 @@ import "./components/LikeButton.css";
 import ClickablePicture from "./components/ClickablePicture";
 import "./components/ClickablePicture.css";
 import Dice from "./components/Dice";
+import Carousel from "./components/Carousel";
 import FaceBook from "./components/Facebook";
 
 const App = () => {
@@ -22,6 +23,16 @@ const App = () => {
       <div className="app-section">
         <Dice />
       </div>
+      <div className="app-section">
+      <Carousel
+        images={[
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg'
+        ]}
+      />
+    </div>
       <div className="app-section">
         <FaceBook />
       </div>

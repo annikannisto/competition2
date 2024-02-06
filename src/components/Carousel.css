@@ -1,0 +1,12 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 20px;
+  }
+  
