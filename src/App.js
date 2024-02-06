@@ -1,25 +1,16 @@
-import logo from './logo.svg';
+import React from'react';
 import './App.css';
+import LikeButton from './components/LikeButton';
+import './components/LikeButton.css';
+import ClickablePicture from './components/ClickablePicture';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <LikeButton />
+      <ClickablePicture img="maxence.png" imgClicked="maxence-glasses.png" />
     </div>
   );
-}
+};
 
 export default App;

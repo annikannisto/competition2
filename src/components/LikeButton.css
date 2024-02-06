@@ -1,0 +1,42 @@
+.like-button {
+  padding: 8px 24px; /* Increased padding for bigger buttons */
+  font-size: 20px; /* Increased font size for bigger buttons */
+  border: 2px;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 10px; /* Added margin between buttons */
+}
+
+.like-button:last-child {
+  margin-right: 0; /* Remove right margin for the last button */
+}
+
+.like-button-purple {
+  background-color: purple;
+  color: white;
+}
+
+.like-button-blue {
+  background-color: blue;
+  color: white;
+}
+
+.like-button-green {
+  background-color: green;
+  color: white;
+}
+
+.like-button-yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.like-button-orange {
+  background-color: orange;
+  color: black;
+}
+
+.like-button-red {
+  background-color: red;
+  color: white;
+}
