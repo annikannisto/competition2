@@ -1,11 +1,17 @@
 .like-button {
-  padding: 8px 24px; /* Increased padding for bigger buttons */
-  font-size: 20px; /* Increased font size for bigger buttons */
-  border: 2px;
+  padding: 6px 18px;
+  font-size: 15px;
+  border: 2px solid transparent; 
   cursor: pointer;
   border-radius: 2px;
   margin: 10px;
   position: relative;
+  transition: border-color 0.3s; 
+}
+
+.like-button:hover {
+  border-color: lightblue; 
+  border-width: 3px;
 }
 
 .like-button-purple {

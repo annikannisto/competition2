@@ -25,4 +25,13 @@ const LikeButton = () => {
   );
 };
 
-export default LikeButton;
+const DualLikeButtons = () => {
+  return (
+    <div>
+      <LikeButton />
+      <LikeButton />
+    </div>
+  );
+};
+
+export default DualLikeButtons;
