@@ -1,0 +1,21 @@
+/* ID Card Section */
+.id-card {
+  border: 4px solid #000000;
+  padding: px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-right: 13px;
+}
+
+.picture {
+  margin-right: 16px;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.picture img {
+  width: 180px;
+}

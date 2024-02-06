@@ -1,19 +1,28 @@
+import React, { useState } from "react";
 import "./LikeButton.css";
 
 const colors = ["purple", "blue", "green", "yellow", "orange", "red"];
-let likeCount1 = 0;
 
-function LikeButton() {
-  const button = document.createElement("button");
-  button.textContent = `${likeCount1} Likes`;
-  button.classList.add("like-button", "like-button-purple");
-  button.addEventListener("click", () => {
-    likeCount1++;
+const LikeButton = () => {
+  const [likeCount, setLikeCount] = useState(0);
+  const [buttonColor, setButtonColor] = useState("purple");
+
+  const handleLikeClick = () => {
+    const newLikeCount = likeCount + 1;
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    button.textContent = `${likeCount1} Likes`;
-    button.style.backgroundColor = randomColor;
-  });
-  document.body.appendChild(button);
-}
+
+    setLikeCount(newLikeCount);
+    setButtonColor(randomColor);
+  };
+
+  return (
+    <button
+      className={`like-button like-button-${buttonColor}`}
+      onClick={handleLikeClick}
+    >
+      {likeCount} Likes
+    </button>
+  );
+};
 
 export default LikeButton;
