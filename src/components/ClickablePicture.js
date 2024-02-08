@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ClickablePicture.css";
+import "./styles.css";
 
 const ClickablePicture = ({ img, imgClicked }) => {
   const [isClicked, setIsClicked] = useState(false);

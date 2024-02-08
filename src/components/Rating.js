@@ -1,5 +1,5 @@
 import React from 'react';
-import './Rating.css';
+import './styles.css';
 
 const Rating = ({ children }) => {
   const filledStars = Math.floor(children);

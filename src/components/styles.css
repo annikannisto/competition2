@@ -1,0 +1,246 @@
+/* Rating Component Styles */
+.rating {
+  display: flex;
+}
+
+.star,
+.empty-star,
+.half-star {
+  font-size: 4em;
+}
+
+.star {
+  color: #000000;
+  text-shadow: -0.01px -0.01px 0 black, 0.01px -0.01px 0 black, -0.01px 0.01px 0 black, 0.01px 0.01px 0 black;
+}
+
+.empty-star {
+  color: #000;
+  text-shadow: -0.01px -0.01px 0 black, 0.01px -0.01px 0 black, -0.01px 0.01px 0 black, 0.01px 0.01px 0 black;
+}
+
+.half-star {
+  color: #000000;
+  text-shadow: -0.01px -0.01px 0 black, 0.01px -0.01px 0 black, -0.01px 0.01px 0 black, 0.01px 0.01px 0 black;
+}
+
+/* DriverCard Component Styles */
+.driver-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: rgb(54, 65, 219);
+}
+
+.driver-img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+}
+
+.driver-info h1 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.driver-rating span {
+  font-size: 65px;
+  color: white;
+  font-weight: 500;
+}
+
+.driver-info p {
+  color: white;
+  font-size: 31.5px;
+  margin-top: 1px;
+  font-weight: 400;
+}
+
+.like-button {
+  padding: 10px 24px;
+  font-size: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 10px;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.like-button:hover {
+  border-color: lightblue;
+  border-width: 3px;
+}
+
+.like-button-purple {
+  background-color: purple;
+  color: white;
+}
+
+.like-button-blue {
+  background-color: blue;
+  color: white;
+}
+
+.like-button-green {
+  background-color: green;
+  color: white;
+}
+
+.like-button-yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.like-button-orange {
+  background-color: orange;
+  color: black;
+}
+
+.like-button-red {
+  background-color: red;
+  color: white;
+}
+
+.container {
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+.dice-container {
+  float: left;
+  margin-right: 20px;
+}
+
+.dice-img {
+  width: 100px;
+  height: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.carousel img {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 20px;
+}
+
+/* NumbersTable.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 20px;
+  height: calc(15vh - 2px);
+  width: calc(15vh - 2px);
+  padding-top: 20px;
+  padding-bottom: 400px;
+  padding-left: 10px;
+}
+
+h2 {
+  font-size: 3rem;
+  color: black;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  font-size: 3rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  height: calc(15vh - 2px);
+  width: calc(15vh - 2px);
+}
+
+.grid-item:nth-child(odd) {
+  background-color: transparent;
+  color: black;
+}
+
+/* Facebook Component */
+.id-card {
+  border: 4px solid #000000;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-right: 13px;
+}
+
+.id-card.selected-country {
+  background-color: lightskyblue;
+  color: white;
+}
+
+.picture {
+  margin-right: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.picture img {
+  width: 180px;
+}
+
+.country-buttons {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.country-buttons button {
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.country-buttons button:hover {
+  background-color: lightcyan;
+}
+
+.country-buttons button.selected {
+  background-color: lightskyblue;
+  color: white;
+}
+
+body .country-buttons {
+  padding-left: 10px;
+}
+
+.country-buttons-container {
+  max-width: 600px;
+  margin: 0 auto;
+}

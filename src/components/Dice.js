@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import "./Dice.css";
+import React, { useState, useEffect } from "react";
+import "./styles.css";
 
 const Dice = () => {
   const [diceValue, setDiceValue] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    getRandomDiceValue();
+  }, []); // Run once on component mount
 
   const getRandomDiceValue = () => {
     setIsLoading(true);
-    setDiceValue(null);
 
     setTimeout(() => {
       const randomValue = Math.floor(Math.random() * 6) + 1;
@@ -18,14 +21,21 @@ const Dice = () => {
 
   const handleImageClick = () => {
     if (!isLoading) {
-      getRandomDiceValue();
+      setDiceValue(null); // Set to null to show blank
+      setIsLoading(true);
+
+      setTimeout(() => {
+        getRandomDiceValue();
+      }, 1000);
     }
   };
 
   return (
     <div className="dice-container">
       <img
-        src={`${process.env.PUBLIC_URL}/images/dice${diceValue || "-empty"}.png`}
+        src={`${process.env.PUBLIC_URL}/images/dice${
+          diceValue || "-empty"
+        }.png`}
         alt={`Dice Value: ${diceValue}`}
         onClick={handleImageClick}
         className="dice-img"

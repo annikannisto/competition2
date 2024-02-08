@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Carousel.css";
+import "./styles.css";
 
 const Carousel = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,7 +19,10 @@ const Carousel = ({ images }) => {
   return (
     <div className="carousel">
       <button onClick={goToPreviousImage}>Left</button>
-      <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
+      <img
+        src={images[currentImageIndex]}
+        alt={`Slide ${currentImageIndex + 1}`}
+      />
       <button onClick={goToNextImage}>Right</button>
     </div>
   );

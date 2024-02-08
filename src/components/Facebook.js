@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import profilesData from "../data/berlin.json";
-import "./Facebook.css";
+import profilesData from "./data/berlin.json";
+import "./styles.css";
 
 const FaceBook = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);

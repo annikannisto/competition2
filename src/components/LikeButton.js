@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LikeButton.css";
+import "./styles.css";
 
 const colors = ["purple", "blue", "green", "yellow", "orange", "red"];
 
